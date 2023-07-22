@@ -19,7 +19,7 @@ async function fetchMoviesBySearch(searchTerm) {
     console.log(data)
   } catch (error) {
     console.error('Error fetching movies:', error);
-    // Handle error, show a message, or take appropriate action based on your app's requirements.
+    // Handle error, show a message, or take appropriate action based on app's requirements.
   }
 }
 
@@ -47,7 +47,7 @@ async function showsearchmovies(data) {
     });
   } catch (error) {
     console.error('Error fetching movies:', error);
-    // Handle error, show a message, or take appropriate action based on your app's requirements.
+    // Handle error, show a message, or take appropriate action based on app's requirements.
   }
 }
 
@@ -80,7 +80,7 @@ async function showmovies() {
     });
   } catch (error) {
     console.error('Error fetching movies:', error);
-    // Handle error, show a message, or take appropriate action based on your app's requirements.
+    // Handle error, show a message, or take appropriate action based on app's requirements.
   }
 }
 
