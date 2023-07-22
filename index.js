@@ -1,11 +1,15 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const path = require('path');
+const dotenv = require('dotenv'); 
 
+
+dotenv.config();
 const app = express();
 const port = 3000;
 
-const API_KEY = "api_key=de5ea25dccaf1a01e8293b9034f465d1";
+const API_KEY = process.env.API_KEY;;
 const Base_url = "https://api.themoviedb.org/3";
 const img_url = "https://image.tmdb.org/t/p/w500";
 
@@ -13,6 +17,8 @@ app.use(cors());
 
 // Middleware to parse JSON data from POST request body
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Function to fetch popular movies
 async function fetchMovies() {
